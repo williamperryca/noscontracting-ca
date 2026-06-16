@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>North of Seven Contracting | Hastings-Lennox and Addington</title>
+  <title>North of Seven Contracting | Hastings-Lennox & Addington</title>
   <meta name="description" content="North of Seven Contracting provides general contracting, landscaping, renovations, decks, patios and sheds across Hastings County, Lennox & Addington, Frontenac County and the Kingston area." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://noscontracting.ca/" />
@@ -26,7 +26,7 @@
     "email": "noscontracting@outlook.com",
     "areaServed": ["Hastings County", "Lennox and Addington County", "Frontenac County", "Kingston Area", "Eastern Ontario"],
     "description": "General contracting, landscaping, renovations, decks, patios, sheds and outdoor structures in Eastern Ontario.",
-    "sameAs": []
+    "sameAs": ["https://www.instagram.com/nos.contracting/"]
   }
   </script>
 
@@ -206,6 +206,79 @@
     .areas { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 28px; }
     .area { background: var(--light); border-radius: 18px; padding: 18px; font-weight: 800; text-align: center; }
 
+
+    .instagram-section { background: var(--light); }
+    .instagram-panel {
+      border-radius: 40px;
+      padding: clamp(28px, 5vw, 56px);
+      background: white;
+      box-shadow: 0 18px 60px rgba(0,0,0,.08);
+    }
+    .instagram-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 28px;
+    }
+    .instagram-top h2 { margin-left: 0; margin-right: 0; max-width: 760px; }
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    .instagram-card {
+      min-height: 260px;
+      border-radius: 26px;
+      overflow: hidden;
+      position: relative;
+      background: linear-gradient(145deg, #1b1b1d, #050505);
+      color: white;
+      box-shadow: 0 14px 40px rgba(0,0,0,.12);
+    }
+    .instagram-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.76));
+      z-index: 1;
+    }
+    .instagram-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--card-image) center/cover;
+      transform: scale(1.01);
+      transition: transform .28s ease;
+    }
+    .instagram-card:hover::after { transform: scale(1.06); }
+    .instagram-card-content {
+      position: absolute;
+      inset: auto 0 0 0;
+      z-index: 2;
+      padding: 22px;
+    }
+    .instagram-card-content span {
+      display: inline-flex;
+      margin-bottom: 8px;
+      color: var(--gold);
+      font-weight: 850;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    .instagram-card-content strong {
+      display: block;
+      font-size: 23px;
+      line-height: 1.05;
+      letter-spacing: -.035em;
+    }
+    .instagram-note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
     .contact { background: var(--black); color: white; }
     .contact-box {
       border-radius: 40px;
@@ -215,7 +288,7 @@
       text-align: center;
       box-shadow: var(--shadow);
     }
-    .contact-methods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 34px 0; text-align: left; }
+    .contact-methods { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 34px 0; text-align: left; }
     .method { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); border-radius: 22px; padding: 22px; }
     .method span { display: block; color: rgba(255,255,255,.56); font-size: 13px; text-transform: uppercase; letter-spacing: .1em; font-weight: 800; }
     .method strong { display: block; margin-top: 7px; font-size: 18px; }
@@ -225,7 +298,7 @@
 
     @media (max-width: 900px) {
       .nav-links a:not(.nav-cta) { display: none; }
-      .stat-grid, .services-grid, .feature-card, .about-grid, .contact-methods { grid-template-columns: 1fr; }
+      .stat-grid, .services-grid, .feature-card, .about-grid, .instagram-top, .instagram-grid, .contact-methods { grid-template-columns: 1fr; }
       .areas { grid-template-columns: 1fr 1fr; }
       .photo-panel { min-height: 360px; }
       section { padding: 72px 18px; }
@@ -247,6 +320,7 @@
       <div class="nav-links">
         <a href="#services">Services</a>
         <a href="#projects">Projects</a>
+        <a href="#instagram">Instagram</a>
         <a href="#about">About</a>
         <a href="#contact" class="nav-cta">Request Quote</a>
       </div>
@@ -307,6 +381,34 @@
     </div>
   </section>
 
+  <section class="instagram-section" id="instagram">
+    <div class="wrap instagram-panel">
+      <div class="instagram-top">
+        <div>
+          <div class="kicker">Instagram</div>
+          <h2>Follow the latest work from the field.</h2>
+          <p class="lead" style="margin-left:0">See current decks, landscaping, renovations, sheds and property improvement projects as they happen.</p>
+        </div>
+        <a class="btn btn-primary" href="https://www.instagram.com/nos.contracting/" target="_blank" rel="noopener">Follow @nos.contracting</a>
+      </div>
+
+      <div class="instagram-grid" aria-label="Instagram project preview cards">
+        <a class="instagram-card" href="https://www.instagram.com/nos.contracting/" target="_blank" rel="noopener" style="--card-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80')">
+          <div class="instagram-card-content"><span>Decks</span><strong>Outdoor builds and upgrades</strong></div>
+        </a>
+        <a class="instagram-card" href="https://www.instagram.com/nos.contracting/" target="_blank" rel="noopener" style="--card-image:url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80')">
+          <div class="instagram-card-content"><span>Renovations</span><strong>Clean interior and exterior work</strong></div>
+        </a>
+        <a class="instagram-card" href="https://www.instagram.com/nos.contracting/" target="_blank" rel="noopener" style="--card-image:url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80')">
+          <div class="instagram-card-content"><span>Landscaping</span><strong>Property improvements and finish work</strong></div>
+        </a>
+      </div>
+
+      <p class="instagram-note">Instagram is used as the live project feed. Replace these preview images with real project photos as they become available.</p>
+    </div>
+  </section>
+
+
   <section id="about">
     <div class="wrap about-grid">
       <div class="owners">
@@ -340,6 +442,7 @@
         <div class="contact-methods">
           <a class="method" href="tel:+14165715084"><span>Phone</span><strong>(416) 571-5084</strong></a>
           <a class="method" href="mailto:noscontracting@outlook.com?subject=Quote%20Request%20-%20North%20of%20Seven%20Contracting"><span>Email</span><strong>noscontracting@outlook.com</strong></a>
+          <a class="method" href="https://www.instagram.com/nos.contracting/" target="_blank" rel="noopener"><span>Instagram</span><strong>@nos.contracting</strong></a>
           <div class="method"><span>Website</span><strong>noscontracting.ca</strong></div>
         </div>
         <a class="btn btn-primary" href="mailto:noscontracting@outlook.com?subject=Quote%20Request%20-%20North%20of%20Seven%20Contracting&body=Name:%0D%0APhone:%0D%0AProject%20location:%0D%0AService%20needed:%0D%0AProject%20details:%0D%0APreferred%20timeline:">Get Started</a>
@@ -350,7 +453,7 @@
   <footer>
     <div class="footer-inner">
       <span>© 2026 North of Seven Contracting. All rights reserved.</span>
-      <span>General Contracting • Landscaping • Renovations • Decks • Patios • Sheds</span>
+      <span><a href="https://www.instagram.com/nos.contracting/" target="_blank" rel="noopener">Instagram @nos.contracting</a> • General Contracting • Landscaping • Renovations • Decks • Patios • Sheds</span>
     </div>
   </footer>
 </body>
